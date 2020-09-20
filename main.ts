@@ -3,29 +3,29 @@ function desorientadoEsquerda () {
         # . . # .
         # # . # #
         . . . . .
-        . # # # .
-        # . . . #
+        . # . # .
+        # . # . #
         `)
     basic.showLeds(`
         # # . # #
         # . . # .
         . . . . .
-        . # # # .
-        # . . . #
+        . # . # .
+        # . # . #
         `)
     basic.showLeds(`
         # # . # #
         . # . . #
         . . . . .
-        . # # # .
-        # . . . #
+        . # . # .
+        # . # . #
         `)
     basic.showLeds(`
         . # . . #
         # # . # #
         . . . . .
-        . # # # .
-        # . . . #
+        . # . # .
+        # . # . #
         `)
 }
 function desorientadoDireita () {
@@ -33,35 +33,47 @@ function desorientadoDireita () {
         # . . # .
         # # . # #
         . . . . .
-        # # # # #
         . . . . .
+        # # # # #
         `)
     basic.showLeds(`
         . # . . #
         # # . # #
         . . . . .
-        # # # # #
         . . . . .
+        # # # # #
         `)
     basic.showLeds(`
         # # . # #
         . # . . #
         . . . . .
-        # # # # #
         . . . . .
+        # # # # #
         `)
     basic.showLeds(`
         # # . # #
         # . . # .
         . . . . .
-        # # # # #
         . . . . .
+        # # # # #
         `)
 }
-basic.showIcon(IconNames.Happy)
+basic.showLeds(`
+    # # . # #
+    # # . # #
+    . . . . .
+    # . . . #
+    . # # # .
+    `)
 basic.forever(function () {
     if (input.acceleration(Dimension.X) < 500 && input.acceleration(Dimension.X) > -500) {
-        basic.showIcon(IconNames.Happy)
+        basic.showLeds(`
+            # # . # #
+            # # . # #
+            . . . . .
+            # . . . #
+            . # # # .
+            `)
     }
     if (input.acceleration(Dimension.X) > 500) {
         for (let index = 0; index < 2; index++) {
@@ -71,8 +83,8 @@ basic.forever(function () {
             # # . # #
             # # . # #
             . . . . .
-            # # # # #
             . . . . .
+            # # # # #
             `)
         basic.pause(500)
     }
@@ -84,8 +96,8 @@ basic.forever(function () {
             # # . # #
             # # . # #
             . . . . .
-            . # # # .
-            # . . . #
+            . # . # .
+            # . # . #
             `)
         basic.pause(500)
     }
